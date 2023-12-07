@@ -92,8 +92,8 @@ if choice == '6':
         f_color = get_new_color()
         f_border_size = random.randint(1, 10)
         draw_polygon(4, f_size, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(4, f_size - 20, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(4, f_size - 30, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(4, f_size - 20, f_orientation, [f_location[0]+10, f_location[1]+10], f_color, f_border_size)
+        draw_polygon(4, f_size - 30, f_orientation, [f_location[0]+15, f_location[1]+15], f_color, f_border_size)
         new_position()
 if choice == '7':
     for i in range(30):
@@ -103,8 +103,8 @@ if choice == '7':
         f_color = get_new_color()
         f_border_size = random.randint(1, 10)
         draw_polygon(5, f_size, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(5, f_size - 20, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(5, f_size - 30, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(5, f_size - 20, f_orientation, [f_location[0]+10, f_location[1]+10], f_color, f_border_size)
+        draw_polygon(5, f_size - 30, f_orientation, [f_location[0]+15, f_location[1]+15], f_color, f_border_size)
         new_position()
 if choice == '8':
     for i in range(30):
@@ -115,8 +115,8 @@ if choice == '8':
         f_color = get_new_color()
         f_border_size = random.randint(1, 10)
         draw_polygon(f_num_sides, f_size, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(f_num_sides, f_size - 20, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(f_num_sides, f_size - 30, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(f_num_sides, f_size - 20, f_orientation, [f_location[0]+10, f_location[1]+10], f_color, f_border_size)
+        draw_polygon(f_num_sides, f_size - 30, f_orientation, [f_location[0]+15, f_location[1]+15], f_color, f_border_size)
         new_position()
 
 
