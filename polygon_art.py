@@ -13,6 +13,7 @@ def draw_polygon(num_sides, size, orientation, location, color, border_size):
         turtle.left(360/num_sides)
     turtle.penup()
 
+
 def get_new_color():
     return (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
 
@@ -54,19 +55,36 @@ size *= reduction_ratio
 
 if choice == '1':
     for i in range(30):
-        draw_polygon(3,  random.randint(50, 150), random.randint(0, 90), [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
+        draw_polygon(3, size, orientation, location, get_new_color(), border_size)
         new_position()
 if choice == '2':
     for i in range(30):
-        draw_polygon(3, random.randint(50, 150), random.randint(0, 90),
-                     [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
+        draw_polygon(4, size, orientation, location, color, border_size)
         new_position()
 if choice == '3':
-    draw_polygon(5, size, orientation, location, color, border_size)
+    for i in range(30):
+        draw_polygon(5, size, orientation, location, color, border_size)
+        new_position()
+if choice == '4':
+    for i in range(30):
+        draw_polygon(num_sides, size, orientation, location, color, border_size)
+        new_position()
+f_size=random.randint(50, 150)
+f_orientation = random.randint(0, 90)
+f_location = [random.randint(-300, 300), random.randint(-200, 200)]
+f_color = get_new_color()
+f_border_size = random.randint(1, 10)
+if choice == '5':
+    for i in range(30):
+        draw_polygon(3, f_size, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(3, f_size - 20, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(3, f_size - 30, f_orientation, f_location, f_color, f_border_size)
+        new_position()
+
 
 
 # draw the second polygon embedded inside the original
-draw_polygon(num_sides, size, orientation, location, color, border_size)
+# draw_polygon(num_sides, size, orientation, location, color, border_size)
 
 
 # hold the window; close it by clicking the window close 'x' mark
