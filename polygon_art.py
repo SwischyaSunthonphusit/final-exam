@@ -55,19 +55,23 @@ size *= reduction_ratio
 
 if choice == '1':
     for i in range(30):
-        draw_polygon(3, size, orientation, location, get_new_color(), border_size)
+        draw_polygon(3, random.randint(50, 150), random.randint(0, 90),
+                     [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
         new_position()
 if choice == '2':
     for i in range(30):
-        draw_polygon(4, size, orientation, location, color, border_size)
+        draw_polygon(4, random.randint(50, 150), random.randint(0, 90),
+                     [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
         new_position()
 if choice == '3':
     for i in range(30):
-        draw_polygon(5, size, orientation, location, color, border_size)
+        draw_polygon(5, random.randint(50, 150), random.randint(0, 90),
+                     [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
         new_position()
 if choice == '4':
     for i in range(30):
-        draw_polygon(num_sides, size, orientation, location, color, border_size)
+        draw_polygon(random.randint(3, 5), random.randint(50, 150), random.randint(0, 90),
+                     [random.randint(-300, 300), random.randint(-200, 200)], get_new_color(), random.randint(1, 10))
         new_position()
 if choice == '5':
     for i in range(30):
@@ -77,8 +81,8 @@ if choice == '5':
         f_color = get_new_color()
         f_border_size = random.randint(1, 10)
         draw_polygon(3, f_size, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(3, f_size - 20, f_orientation, f_location, f_color, f_border_size)
-        draw_polygon(3, f_size - 30, f_orientation, f_location, f_color, f_border_size)
+        draw_polygon(3, f_size - 30, f_orientation, [f_location[0]+10, f_location[1]+10], f_color, f_border_size)
+        draw_polygon(3, f_size - 50, f_orientation, [f_location[0]+15, f_location[1]+15], f_color, f_border_size)
         new_position()
 if choice == '6':
     for i in range(30):
